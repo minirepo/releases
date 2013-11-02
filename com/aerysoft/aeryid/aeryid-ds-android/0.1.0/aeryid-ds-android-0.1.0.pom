@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.aeryid</groupId>
+    <artifactId>aeryid-ds</artifactId>
+    <version>0.1.0</version>
+  </parent>
+
+  <artifactId>aeryid-ds-android</artifactId>
+  <packaging>jar</packaging>
+
+  <name>AeryId DS Android Jar</name>
+  <description>AeryId data store android client library.</description>
+  <url>http://www.aeryid.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+
+  <build>
+    <sourceDirectory>../aeryid-ds-main/src/main/java</sourceDirectory>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+            <id>package-android-client</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classifier>android</classifier>
+              <excludes>
+                <exclude>**/ws/dao/mock/*</exclude>
+                <exclude>**/ws/service/mock/*</exclude>
+                <exclude>**/ws/resource/mock/*</exclude>
+              </excludes>
+              <includes>
+                <include>**/ws/core/*</include>
+                <include>**/ws/util/*</include>
+                <include>**/ws/*</include>
+                <include>**/ws/exception/*</include>
+                <include>**/ws/exception/resource/*</include>
+                <include>**/ws/resource/exception/*</include>
+                <include>**/ws/stub/*</include>
+              </includes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.aerysoft.aeryid</groupId>
+      <artifactId>aeryid-ds-main</artifactId>
+      <version>0.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+
+
+</project>
