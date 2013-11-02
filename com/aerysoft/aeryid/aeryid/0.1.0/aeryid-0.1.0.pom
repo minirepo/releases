@@ -225,6 +225,11 @@
 
     <!--  MiniRepo  -->
     <repository>
+      <id>minirepo.repackaged</id>
+      <name>MiniRepo Repository - Repackaged</name>
+      <url>file:///Projects/minirepo/repackaged/</url>
+    </repository>
+    <repository>
       <id>minirepo.snapshots</id>
       <name>MiniRepo Repository - Snapshots</name>
 <!--
@@ -396,11 +401,28 @@
 
     <!--  temporary. for Jersey 1.17  -->
 <!--  -->
+
+    <!--  Repackaged  -->
     <dependency>
-        <groupId>com.sun.jersey</groupId>
-        <artifactId>jersey-server</artifactId>
-        <version>1.17.1</version>
+      <groupId>org.minimaven.repackaged.jersey</groupId>
+      <artifactId>jersey-server-dep</artifactId>
+      <version>1.17.1r</version>
     </dependency>
+
+<!--
+    <dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-server</artifactId>
+      <version>1.17.1</version>
+      <exclusions>
+        <exclusion>
+          <groupId>asm</groupId>
+          <artifactId>asm</artifactId>
+        </exclusion>
+      </exclusions> 
+    </dependency>
+-->
+
     <dependency>
         <groupId>com.sun.jersey</groupId>
         <artifactId>jersey-client</artifactId>
@@ -431,6 +453,16 @@
         <artifactId>jersey-servlet</artifactId>
         <version>1.17.1</version>
         <scope>runtime</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-server</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>asm</groupId>
+            <artifactId>asm</artifactId>
+          </exclusion>
+        </exclusions> 
     </dependency>
 <!--  -->
 
