@@ -3,10 +3,11 @@
   <groupId>com.aerysoft.geostoa</groupId>
   <artifactId>geostoa-wc-main</artifactId>
   <versioning>
-    <release>0.1.0</release>
+    <release>0.1.1</release>
     <versions>
       <version>0.1.0</version>
+      <version>0.1.1</version>
     </versions>
-    <lastUpdated>20131103005621</lastUpdated>
+    <lastUpdated>20131103124811</lastUpdated>
   </versioning>
 </metadata>
