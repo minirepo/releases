@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.pagesynopsis</groupId>
+    <artifactId>pagesynopsis-ds</artifactId>
+    <version>0.1.0</version>
+  </parent>
+
+  <artifactId>pagesynopsis-ds-web</artifactId>
+  <packaging>war</packaging>
+
+  <name>PageSynopsis DS Web</name>
+  <description>PageSynopsis data store web services module.</description>
+  <url>http://www.pagesynopsis.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+
+  <properties>
+    <appengine.app.version>1</appengine.app.version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <archiveClasses>true</archiveClasses>
+          <webResources>
+            <resource>
+              <directory>${basedir}/src/main/webapp/WEB-INF</directory>
+              <filtering>true</filtering>
+              <targetPath>WEB-INF</targetPath>
+            </resource>
+          </webResources>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.google.appengine</groupId>
+        <artifactId>appengine-maven-plugin</artifactId>
+        <version>${appengine.target.version}</version>
+        <configuration>
+          <port>8888</port>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  
+  <dependencies>
+    <dependency>
+      <groupId>com.aerysoft.pagesynopsis</groupId>
+      <artifactId>pagesynopsis-ds-main</artifactId>
+      <version>0.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+
+</project>
