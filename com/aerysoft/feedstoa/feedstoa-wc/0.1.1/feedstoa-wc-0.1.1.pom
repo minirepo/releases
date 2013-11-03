@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.feedstoa</groupId>
+    <artifactId>feedstoa</artifactId>
+    <version>0.1.1</version>
+  </parent>
+
+  <artifactId>feedstoa-wc</artifactId>
+  <packaging>pom</packaging>
+
+  <name>FeedStoa WC</name>
+  <description>FeedStoa Web Client.</description>
+  <url>http://www.feedstoa.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.aerysoft.feedstoa</groupId>
+      <artifactId>feedstoa-ds-client</artifactId>
+      <version>0.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.aerysoft.feedstoa</groupId>
+      <artifactId>feedstoa-fe-client</artifactId>
+      <version>0.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+
+  </dependencies>
+
+  <modules>
+    <module>feedstoa-wc-main</module>
+    <module>feedstoa-wc-client</module>
+    <module>feedstoa-wc-android</module>
+  </modules>
+</project>
