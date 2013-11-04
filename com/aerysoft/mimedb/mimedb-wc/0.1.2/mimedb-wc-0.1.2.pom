@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.mimedb</groupId>
+    <artifactId>mimedb</artifactId>
+    <version>0.1.2</version>
+  </parent>
+
+  <artifactId>mimedb-wc</artifactId>
+  <packaging>pom</packaging>
+
+  <name>MimeDB WC</name>
+  <description>MimeDB Web Client.</description>
+  <url>http://www.mimedb.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.aerysoft.mimedb</groupId>
+      <artifactId>mimedb-ds-client</artifactId>
+      <version>0.1.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.aerysoft.mimedb</groupId>
+      <artifactId>mimedb-fe-client</artifactId>
+      <version>0.1.2</version>
+      <scope>compile</scope>
+    </dependency>
+
+  </dependencies>
+
+  <modules>
+    <module>mimedb-wc-main</module>
+    <module>mimedb-wc-client</module>
+    <module>mimedb-wc-android</module>
+  </modules>
+</project>
