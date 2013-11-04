@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.urltally</groupId>
+    <artifactId>urltally</artifactId>
+    <version>0.1.1</version>
+  </parent>
+
+  <artifactId>urltally-ds</artifactId>
+  <packaging>pom</packaging>
+
+  <name>UrlTally DS</name>
+  <description>UrlTally data store.</description>
+  <url>http://www.urltally.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+  <build>
+    <plugins>
+<!--  -->
+      <plugin>
+        <groupId>org.datanucleus</groupId>
+        <artifactId>maven-datanucleus-plugin</artifactId>
+        <version>3.1.3</version>
+        <configuration>
+          <fork>false</fork>
+          <verbose>true</verbose>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>enhance</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+<!--  -->
+    </plugins>
+  </build>
+
+  <modules>
+    <module>urltally-ds-main</module>
+    <module>urltally-ds-client</module>
+    <module>urltally-ds-android</module>
+    <module>urltally-ds-web</module>
+  </modules>
+</project>
