@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.ingressdb</groupId>
+    <artifactId>ingressdb</artifactId>
+    <version>0.1.1</version>
+  </parent>
+
+  <artifactId>ingressdb-wc</artifactId>
+  <packaging>pom</packaging>
+
+  <name>IngressDB WC</name>
+  <description>IngressDB Web Client.</description>
+  <url>http://www.ingressdb.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.aerysoft.ingressdb</groupId>
+      <artifactId>ingressdb-ds-client</artifactId>
+      <version>0.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.aerysoft.ingressdb</groupId>
+      <artifactId>ingressdb-fe-client</artifactId>
+      <version>0.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+
+  </dependencies>
+
+  <modules>
+    <module>ingressdb-wc-main</module>
+    <module>ingressdb-wc-client</module>
+    <module>ingressdb-wc-android</module>
+  </modules>
+</project>
