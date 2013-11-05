@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.timespool</groupId>
+    <artifactId>timespool</artifactId>
+    <version>0.1.1</version>
+  </parent>
+
+  <artifactId>timespool-wc</artifactId>
+  <packaging>pom</packaging>
+
+  <name>TimeSpool WC</name>
+  <description>TimeSpool Web Client.</description>
+  <url>http://www.timespool.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.aerysoft.timespool</groupId>
+      <artifactId>timespool-ds-client</artifactId>
+      <version>0.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.aerysoft.timespool</groupId>
+      <artifactId>timespool-fe-client</artifactId>
+      <version>0.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+
+  </dependencies>
+
+  <modules>
+    <module>timespool-wc-main</module>
+    <module>timespool-wc-client</module>
+    <module>timespool-wc-android</module>
+  </modules>
+</project>
