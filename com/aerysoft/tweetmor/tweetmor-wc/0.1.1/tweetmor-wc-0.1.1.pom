@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.tweetmor</groupId>
+    <artifactId>tweetmor</artifactId>
+    <version>0.1.1</version>
+  </parent>
+
+  <artifactId>tweetmor-wc</artifactId>
+  <packaging>pom</packaging>
+
+  <name>TweetMor WC</name>
+  <description>TweetMor Web Client.</description>
+  <url>http://www.tweetmor.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.aerysoft.tweetmor</groupId>
+      <artifactId>tweetmor-ds-client</artifactId>
+      <version>0.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.aerysoft.tweetmor</groupId>
+      <artifactId>tweetmor-fe-client</artifactId>
+      <version>0.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+
+  </dependencies>
+
+  <modules>
+    <module>tweetmor-wc-main</module>
+    <module>tweetmor-wc-client</module>
+    <module>tweetmor-wc-android</module>
+  </modules>
+</project>
