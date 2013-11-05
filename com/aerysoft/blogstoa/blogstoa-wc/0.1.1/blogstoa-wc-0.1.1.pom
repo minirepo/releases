@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.blogstoa</groupId>
+    <artifactId>blogstoa</artifactId>
+    <version>0.1.1</version>
+  </parent>
+
+  <artifactId>blogstoa-wc</artifactId>
+  <packaging>pom</packaging>
+
+  <name>BlogStoa WC</name>
+  <description>BlogStoa Web Client.</description>
+  <url>http://www.blogstoa.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.aerysoft.blogstoa</groupId>
+      <artifactId>blogstoa-ds-client</artifactId>
+      <version>0.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.aerysoft.blogstoa</groupId>
+      <artifactId>blogstoa-fe-client</artifactId>
+      <version>0.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+
+  </dependencies>
+
+  <modules>
+    <module>blogstoa-wc-main</module>
+    <module>blogstoa-wc-client</module>
+    <module>blogstoa-wc-android</module>
+  </modules>
+</project>
