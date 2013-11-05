@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.glassmemo</groupId>
+    <artifactId>glassmemo</artifactId>
+    <version>0.1.1</version>
+  </parent>
+
+  <artifactId>glassmemo-wc</artifactId>
+  <packaging>pom</packaging>
+
+  <name>GlassMemo WC</name>
+  <description>GlassMemo Web Client.</description>
+  <url>http://www.glassmemo.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.aerysoft.glassmemo</groupId>
+      <artifactId>glassmemo-ds-client</artifactId>
+      <version>0.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.aerysoft.glassmemo</groupId>
+      <artifactId>glassmemo-fe-client</artifactId>
+      <version>0.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+
+  </dependencies>
+
+  <modules>
+    <module>glassmemo-wc-main</module>
+    <module>glassmemo-wc-client</module>
+    <module>glassmemo-wc-android</module>
+  </modules>
+</project>
