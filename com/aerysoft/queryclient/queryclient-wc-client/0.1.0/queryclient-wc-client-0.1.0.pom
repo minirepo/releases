@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.queryclient</groupId>
+    <artifactId>queryclient-wc</artifactId>
+    <version>0.1.0</version>
+  </parent>
+
+  <artifactId>queryclient-wc-client</artifactId>
+  <packaging>jar</packaging>
+
+  <name>QueryClient WC Client Jar</name>
+  <description>QueryClient Web Client client library.</description>
+  <url>http://www.queryclient.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+
+  <build>
+    <sourceDirectory>../queryclient-wc-main/src/main/java</sourceDirectory>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+
+          <excludes>
+            <exclude>**/mock/*</exclude>
+          </excludes>
+          <includes>
+            <include>**</include>
+          </includes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+            <id>package-client</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classifier>client</classifier>
+              <excludes>
+                <exclude>**/mock/*</exclude>
+              </excludes>
+              <includes>
+                <include>**</include>
+              </includes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+
+<!--
+    <dependency>
+      <groupId>com.aerysoft.queryclient</groupId>
+      <artifactId>queryclient-wc-main</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+-->
+
+    <dependency>
+      <groupId>com.aerysoft.queryclient</groupId>
+      <artifactId>queryclient-ds-client</artifactId>
+      <version>0.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.aerysoft.queryclient</groupId>
+      <artifactId>queryclient-fe-client</artifactId>
+      <version>0.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+
+  </dependencies>
+
+
+</project>
