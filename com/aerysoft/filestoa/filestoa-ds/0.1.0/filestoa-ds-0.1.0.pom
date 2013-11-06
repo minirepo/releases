@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.filestoa</groupId>
+    <artifactId>filestoa</artifactId>
+    <version>0.1.0</version>
+  </parent>
+
+  <artifactId>filestoa-ds</artifactId>
+  <packaging>pom</packaging>
+
+  <name>FileStoa DS</name>
+  <description>FileStoa data store.</description>
+  <url>http://www.filestoa.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+
+  <build>
+    <plugins>
+<!--  -->
+      <plugin>
+        <groupId>org.datanucleus</groupId>
+        <artifactId>maven-datanucleus-plugin</artifactId>
+        <version>3.1.3</version>
+        <configuration>
+          <fork>false</fork>
+          <verbose>true</verbose>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>enhance</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+<!--  -->
+    </plugins>
+  </build>
+
+
+  <modules>
+    <module>filestoa-ds-main</module>
+    <module>filestoa-ds-client</module>
+    <module>filestoa-ds-android</module>
+    <module>filestoa-ds-web</module>
+  </modules>
+</project>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.filestoa</groupId>
+    <artifactId>filestoa</artifactId>
+    <version>0.1.0</version>
+  </parent>
+
+  <artifactId>filestoa-wc</artifactId>
+  <packaging>pom</packaging>
+
+  <name>FileStoa WC</name>
+  <description>FileStoa Web Client.</description>
+  <url>http://www.filestoa.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.aerysoft.filestoa</groupId>
+      <artifactId>filestoa-ds-client</artifactId>
+      <version>0.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.aerysoft.filestoa</groupId>
+      <artifactId>filestoa-fe-client</artifactId>
+      <version>0.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+
+  </dependencies>
+
+  <modules>
+    <module>filestoa-wc-main</module>
+    <module>filestoa-wc-client</module>
+    <module>filestoa-wc-android</module>
+  </modules>
+</project>
