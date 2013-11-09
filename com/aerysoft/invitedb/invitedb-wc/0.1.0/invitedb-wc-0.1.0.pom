@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.aerysoft.invitedb</groupId>
+    <artifactId>invitedb</artifactId>
+    <version>0.1.0</version>
+  </parent>
+
+  <artifactId>invitedb-wc</artifactId>
+  <packaging>pom</packaging>
+
+  <name>InviteDB WC</name>
+  <description>InviteDB Web Client.</description>
+  <url>http://www.invitedb.com/</url>
+  <inceptionYear>2013</inceptionYear>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.aerysoft.invitedb</groupId>
+      <artifactId>invitedb-ds-client</artifactId>
+      <version>0.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.aerysoft.invitedb</groupId>
+      <artifactId>invitedb-fe-client</artifactId>
+      <version>0.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+
+  </dependencies>
+
+  <modules>
+    <module>invitedb-wc-main</module>
+    <module>invitedb-wc-client</module>
+    <module>invitedb-wc-android</module>
+  </modules>
+</project>
